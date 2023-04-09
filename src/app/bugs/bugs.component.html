@@ -1,0 +1,22 @@
+<h1>
+    All Bugs
+</h1>
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Status</th>
+        <th>Description</th>
+        <th>Assigned to</th>
+    </tr>
+    <tr *ngFor="let bug of bugs">
+        <td>{{bug.id}}</td>
+        <td>{{bug.title}}</td>
+        <td>{{bug.status}}</td>
+        <td>{{bug.created | date}}</td>
+        <td>
+            <button mat-button routerLink="/edit/{{bug.id}}">Edit</button>
+            <button mat-button routerLink="/delete/{{bug.id}}">Delete</button>
+        </td>
+    </tr>
+</table>
