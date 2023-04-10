@@ -6,6 +6,8 @@ import { Bug } from '../models/Bug';
 import { NgForm } from '@angular/forms';
 import { Location } from '@angular/common';
 
+declare var particlesJS: any;
+
 @Component({
   selector: 'app-edit',
   templateUrl: './edit.component.html',
@@ -19,6 +21,9 @@ export class EditComponent implements OnInit{
   current: Bug;
   ngOnInit() {
     this.populateForm();
+    particlesJS.load('particles-js', 'assets/data/particles.json', function() {
+      console.log('callback - particles.js config loaded');
+    });
   }
 
   onEditBug(bug: {

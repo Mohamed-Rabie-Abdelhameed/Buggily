@@ -7,9 +7,9 @@ table {
   background-color: #2c2c2c;
 }
 
-h1{
-    text-align: center;
-    font-size: 2.5em;
+h1 {
+  text-align: center;
+  font-size: 2.5em;
 }
 
 th,
@@ -19,8 +19,8 @@ td {
   border-bottom: 1px solid #ddd;
 }
 
-th{
-    font-size: 1.2em;
+th {
+  font-size: 1.2em;
 }
 
 tr:hover {
@@ -35,7 +35,7 @@ tr:hover {
 }
 
 #buttons :nth-child(1) {
-  background-color: #12bea2;
+  background-color: #00af92;
   color: #f6f4f3;
   font-size: 1.1em;
   width: 40%;
@@ -45,7 +45,7 @@ tr:hover {
 }
 
 #buttons :nth-child(2) {
-  background-color: #ff6c6a;
+  background-color: #ff4744;
   color: #f6f4f3;
   font-size: 1.1em;
   width: 40%;
@@ -62,7 +62,8 @@ tr:hover {
 }
 
 #top-bar {
-    padding: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -81,9 +82,12 @@ tr:hover {
 }
 
 mat-icon {
-    color: #000000;
-    font-weight: bold;
-    font-size: 1.15em;
+  color: #000000;
+  font-weight: bold;
+  font-size: 1.2em;
+  position: relative;
+  top: 2px;
+  right: 2px;
 }
 
 @keyframes anim {

@@ -25,9 +25,7 @@
 }
 
 .txt > h1 {
-  background-image: linear-gradient(90deg, #2cd9ff 0%, #7eff82 100%);
-  background-size: 400% 400%;
-  animation: anim 2.5s infinite ease-in-out;
+  background-image: linear-gradient(90deg, #2c53ff 0%, #00c3ff 100%);
   background-clip: text ;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -37,22 +35,11 @@
   margin: 10px;
 }
 
-@keyframes anim {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
 
 .txt > p {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 400;
-  width: 70%;
+  width: 65%;
   text-align: center;
 }
 
@@ -79,11 +66,11 @@
   font-weight: 600;
   color: #f6f4f3;
   cursor: pointer;
-  background-color: #43aa8b;
+  background-color: #00af92;
 }
 
 .buttons > button:hover {
-  background-color: #2e8b6a;
+  background-color: #009a7f;
   transition: 0.3s;
 }
 
@@ -94,4 +81,21 @@
 .buttons > button:nth-child(1):hover {
   background-color: #b52b2a;
   transition: 0.3s;
+}
+#out {
+  width: 100%;
+  height: calc(100% - 110px);
+  position: relative;
+}
+
+#particles-js,
+#over {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#over {
+  z-index: 10;
 }

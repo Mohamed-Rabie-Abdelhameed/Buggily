@@ -5,21 +5,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
-import {MatButtonModule} from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
-import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
-import { MatIconButton } from '@angular/material/button';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatIconModule } from '@angular/material/icon';
 import { BugsComponent } from './bugs/bugs.component';
 import { ErrorComponent } from './error/error.component';
 import { NewComponent } from './new/new.component';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { EditComponent } from './edit/edit.component';
-
-
-
 
 @NgModule({
   declarations: [
@@ -29,7 +25,7 @@ import { EditComponent } from './edit/edit.component';
     BugsComponent,
     ErrorComponent,
     NewComponent,
-    EditComponent
+    EditComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,6 +39,6 @@ import { EditComponent } from './edit/edit.component';
     MatIconModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

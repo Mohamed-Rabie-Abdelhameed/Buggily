@@ -1,20 +1,31 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Bug } from '../models/Bug';
 import { ApiService } from '../services/api.service';
 import { NgForm } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Location } from '@angular/common';
+
+declare var particlesJS: any;
+
 @Component({
   selector: 'app-new',
   templateUrl: './new.component.html',
   styleUrls: ['./new.component.css'],
 })
-export class NewComponent {
-  constructor(private api: ApiService, private snackBar: MatSnackBar, private location: Location) {}
+export class NewComponent implements OnInit {
+  constructor(
+    private api: ApiService,
+    private snackBar: MatSnackBar,
+    private location: Location
+  ) {}
+
+  ngOnInit(): void {
+    particlesJS.load('particles-js', 'assets/data/particles.json', function () {
+      console.log('callback - particles.js config loaded');
+    });
+  }
 
   @ViewChild('addForm') addForm!: NgForm;
-
-
 
   onAddBug(bug: {
     title: string;
