@@ -3,15 +3,14 @@ import { Bug } from '../models/Bug';
 import { ApiService } from '../services/api.service';
 import { NgForm } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { Router } from '@angular/router';
-
+import { Location } from '@angular/common';
 @Component({
   selector: 'app-new',
   templateUrl: './new.component.html',
   styleUrls: ['./new.component.css'],
 })
 export class NewComponent {
-  constructor(private api: ApiService, private snackBar: MatSnackBar, private router: Router) {}
+  constructor(private api: ApiService, private snackBar: MatSnackBar, private location: Location) {}
 
   @ViewChild('addForm') addForm!: NgForm;
 
@@ -45,6 +44,6 @@ export class NewComponent {
   }
 
   onCancel() {
-    this.router.navigate(['/']);
+    this.location.back();
   }
 }

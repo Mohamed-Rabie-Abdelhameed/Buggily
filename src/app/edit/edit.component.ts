@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from '../services/api.service';
 import { Bug } from '../models/Bug';
 import { NgForm } from '@angular/forms';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-edit',
@@ -11,7 +12,7 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./edit.component.css']
 })
 export class EditComponent implements OnInit{
-  constructor(private api: ApiService, private snackBar: MatSnackBar,private router: Router, private route: ActivatedRoute) {}
+  constructor(private api: ApiService, private snackBar: MatSnackBar,private location:Location, private route: ActivatedRoute) {}
   @ViewChild('editForm') editForm!: NgForm;
 
   id!: string;
@@ -35,7 +36,7 @@ export class EditComponent implements OnInit{
   }
 
   onCancel() {
-    this.router.navigate(['/bugs']);
+    this.location.back();
   }
 
  
