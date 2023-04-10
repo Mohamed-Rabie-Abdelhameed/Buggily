@@ -6,21 +6,25 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-bugs',
   templateUrl: './bugs.component.html',
-  styleUrls: ['./bugs.component.css']
+  styleUrls: ['./bugs.component.css'],
 })
 export class BugsComponent {
   bugs: any[] = [];
 
-  constructor(private api: ApiService, private snackbar: MatSnackBar, private router: Router) {
+  constructor(
+    private api: ApiService,
+    private snackbar: MatSnackBar,
+    private router: Router
+  ) {
     this.fetchBugs();
   }
 
   onDelete(id: string) {
-    this.snackbar.open(id, 'Dismiss', {
-      duration: 2000,
-      panelClass: ['green-snackbar'],
-    });
     this.api.deleteBug(id).subscribe(() => {
+      this.snackbar.open(id, 'Dismiss', {
+        duration: 2000,
+        panelClass: ['green-snackbar'],
+      });
       this.fetchBugs();
     });
   }
