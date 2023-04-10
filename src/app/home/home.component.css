@@ -26,7 +26,7 @@
 
 .txt > h1 {
   background-image: linear-gradient(90deg, #2c53ff 0%, #00c3ff 100%);
-  background-clip: text ;
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: transparent;
@@ -34,7 +34,6 @@
   font-weight: 600;
   margin: 10px;
 }
-
 
 .txt > p {
   font-size: 1.5rem;
