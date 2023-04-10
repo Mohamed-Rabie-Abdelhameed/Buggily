@@ -16,6 +16,7 @@ import { NewComponent } from './new/new.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EditComponent } from './edit/edit.component';
 
 
 
@@ -27,7 +28,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HomeComponent,
     BugsComponent,
     ErrorComponent,
-    NewComponent
+    NewComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,

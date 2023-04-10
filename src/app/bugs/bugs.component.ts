@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ApiService } from '../services/api.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-bugs',
@@ -10,7 +11,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class BugsComponent {
   bugs: any[] = [];
 
-  constructor(private api: ApiService, private snackbar: MatSnackBar) {
+  constructor(private api: ApiService, private snackbar: MatSnackBar, private router: Router) {
     this.fetchBugs();
   }
 
@@ -29,5 +30,9 @@ export class BugsComponent {
       this.bugs = data;
       console.log(this.bugs);
     });
+  }
+
+  onEdit(id: string) {
+    this.router.navigate([`/edit/${id}`]);
   }
 }

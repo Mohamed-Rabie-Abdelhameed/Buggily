@@ -26,7 +26,7 @@
             <td>{{bug.createdDate | date}}</td>
             <td>{{bug.resolvedDate | date}}</td>
             <td id="buttons">
-                <button mat-button>Edit</button>
+                <button mat-button (click)="onEdit(bug.id)">Edit</button>
                 <button mat-button (click)="onDelete(bug.id)">Delete</button>
             </td>
         </tr>

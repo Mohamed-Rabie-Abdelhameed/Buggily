@@ -46,7 +46,11 @@ export class ApiService {
     return this.http.delete(this.apiUrl + "bugs/" + id + '.json');
   }
 
-  updateBug(bug: Bug) {
-    return this.http.put(this.apiUrl + "bugs/" + bug.id + '.json', bug).subscribe();
+  updateBug(id:string ,bug: Bug) {
+    return this.http.patch(this.apiUrl + "bugs/" + id + '.json', bug).subscribe();
+  }
+
+  getBug(id: string) {
+    return this.http.get<Bug>(this.apiUrl + "bugs/" + id + '.json');
   }
 }

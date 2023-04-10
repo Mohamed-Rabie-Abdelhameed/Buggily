@@ -1,0 +1,26 @@
+<div id="out">
+    <div class="container">
+      <h1>Edit Bug</h1>
+      <form #editForm="ngForm" (ngSubmit)="onEditBug(editForm.value)">
+        <label for="title">Title</label>
+        <input required placeholder="enter the title of the bug" type="text" name="title" id="title" ngModel />
+        <label for="status">Status</label>
+        <select required name="status" id="status" ngModel>
+          <option value="Open" selected>Open</option>
+          <option value="In Progress">In Progress</option>
+          <option value="Resolved">Resolved</option>
+          <option value="Closed">Closed</option>
+        </select>
+        <label for="assignedTo">Assigned To</label>
+        <input required placeholder="enter the team/person to be assigned this bug" type="text" name="assignedTo" id="assignedTo" ngModel />
+        <label for="description">Description</label>
+        <textarea required placeholder="enter the description of the bug..." name="description" id="description" ngModel></textarea>
+        <div id="buttons">
+          <button mat-button type="submit" [disabled]="editForm.invalid">Edit Bug</button>
+          <button mat-button type="reset" (click)="onCancel()">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  
