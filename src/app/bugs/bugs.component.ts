@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../services/api.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
@@ -8,7 +8,12 @@ import { Router } from '@angular/router';
   templateUrl: './bugs.component.html',
   styleUrls: ['./bugs.component.css'],
 })
-export class BugsComponent {
+export class BugsComponent implements OnInit{
+
+  ngOnInit() {
+    this.fetchBugs();
+  }
+
   bugs: any[] = [];
 
   constructor(
