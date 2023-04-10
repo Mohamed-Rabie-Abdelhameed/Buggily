@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ApiService } from '../services/api.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-bugs',
@@ -9,12 +10,24 @@ import { ApiService } from '../services/api.service';
 export class BugsComponent {
   bugs: any[] = [];
 
-  // constructor(private api: ApiService) {
-  //   this.api.getBugs().subscribe((data) => {
-  //     this.bugs = data;
-  //     console.log(this.bugs);
-  //   });
-  // }
+  constructor(private api: ApiService, private snackbar: MatSnackBar) {
+    this.fetchBugs();
+  }
 
+  onDelete(id: string) {
+    this.snackbar.open(id, 'Dismiss', {
+      duration: 2000,
+      panelClass: ['green-snackbar'],
+    });
+    this.api.deleteBug(id).subscribe(() => {
+      this.fetchBugs();
+    });
+  }
 
+  fetchBugs() {
+    this.api.getBugs().subscribe((data) => {
+      this.bugs = data;
+      console.log(this.bugs);
+    });
+  }
 }

@@ -1,3 +1,99 @@
-*{
-    color: #f6f4f3;
+* {
+  color: #f6f4f3;
+}
+
+table {
+  width: 100%;
+  background-color: #2c2c2c;
+}
+
+h1{
+    text-align: center;
+    font-size: 2.5em;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th{
+    font-size: 1.2em;
+}
+
+tr:hover {
+  background-color: #6d6d6d;
+}
+
+#buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+#buttons :nth-child(1) {
+  background-color: #12bea2;
+  color: #f6f4f3;
+  font-size: 1.1em;
+  width: 40%;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+}
+
+#buttons :nth-child(2) {
+  background-color: #ff6c6a;
+  color: #f6f4f3;
+  font-size: 1.1em;
+  width: 40%;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+}
+
+.container {
+  background-color: #2c2c2c;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+#top-bar {
+    padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#top-bar button {
+  background: linear-gradient(90deg, #2cd9ff 0%, #7eff82 100%);
+  background-size: 400% 400%;
+  margin: 10px;
+  animation: anim 2.5s infinite ease-in-out;
+  color: #f6f4f3;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px 0 #000000;
+}
+
+mat-icon {
+    color: #000000;
+    font-weight: bold;
+    font-size: 1.15em;
+}
+
+@keyframes anim {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }

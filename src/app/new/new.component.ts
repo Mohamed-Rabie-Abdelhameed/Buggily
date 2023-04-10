@@ -3,6 +3,7 @@ import { Bug } from '../models/Bug';
 import { ApiService } from '../services/api.service';
 import { NgForm } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-new',
@@ -10,9 +11,11 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./new.component.css'],
 })
 export class NewComponent {
-  constructor(private api: ApiService, private snackBar: MatSnackBar) {}
+  constructor(private api: ApiService, private snackBar: MatSnackBar, private router: Router) {}
 
   @ViewChild('addForm') addForm!: NgForm;
+
+
 
   onAddBug(bug: {
     title: string;
@@ -26,15 +29,22 @@ export class NewComponent {
       title: bug.title,
       description: bug.description,
       status: bug.status,
-      createdDate: bug.createdDate,
+      createdDate: new Date(),
       assignedTo: bug.assignedTo,
-      resolvedDate: bug.resolvedDate,
+      resolvedDate: new Date(),
     };
     this.api.createBug(newBug);
-    this.snackBar.open('Bug added!', 'Close', {
+    this.openSnackBar('Bug added', 'Close');
+    this.addForm.reset();
+  }
+  openSnackBar(message: string, action: string) {
+    this.snackBar.open(message, action, {
       duration: 2000,
+      panelClass: ['green-snackbar'],
     });
-    console.log(this.addForm.value);
   }
 
+  onCancel() {
+    this.router.navigate(['/']);
+  }
 }

@@ -40,24 +40,9 @@
   width: 50%;
   display: flex;
   justify-content: center;
-  /* background: linear-gradient(90deg, #2cd9ff 0%, #7eff82 100%);
-  background-size: 400% 400%;
-  border-radius: 25px;
-  margin: 30px;
-  animation: anim 2.5s infinite ease-in-out; */
 }
 
-@keyframes anim {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
+
 
 .buttons {
   display: flex;
@@ -75,11 +60,11 @@
   font-size: 1.2em;
   font-weight: 600;
   cursor: pointer;
-  background-color: #2e8b6a;
+  background-color: #43aa8b;
 }
 
 .buttons > button:hover {
-  background-color: #43aa8b;
+  background-color: #2e8b6a;
   transition: 0.3s;
 }
 
@@ -88,6 +73,6 @@
 }
 
 .buttons > button:nth-child(1):hover {
-  background-color: #fa5c59;
+  background-color: #b52b2a;
   transition: 0.3s;
 }

@@ -1,22 +1,35 @@
-<h1>
-    All Bugs
-</h1>
-<table>
-    <tr>
-        <th>Id</th>
-        <th>Title</th>
-        <th>Status</th>
-        <th>Description</th>
-        <th>Assigned to</th>
-    </tr>
-    <tr *ngFor="let bug of bugs">
-        <td>{{bug.id}}</td>
-        <td>{{bug.title}}</td>
-        <td>{{bug.status}}</td>
-        <td>{{bug.created | date}}</td>
-        <td>
-            <button mat-button routerLink="/edit/{{bug.id}}">Edit</button>
-            <button mat-button routerLink="/delete/{{bug.id}}">Delete</button>
-        </td>
-    </tr>
-</table>
+<div class="container">
+    <div id="top-bar">
+        <h1>
+            All Bugs
+        </h1>
+        <button mat-icon-button routerLink="/new">
+            <mat-icon>add</mat-icon>
+        </button>
+    </div>
+    
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Status</th>
+            <th>Description</th>
+            <th>Assigned to</th>
+            <th>Created</th>
+            <th>Resolved</th>
+            <th>Actions</th>
+        </tr>
+        <tr *ngFor="let bug of bugs">
+            <td>{{bug.title}}</td>
+            <td>{{bug.status}}</td>
+            <td>{{bug.description}}</td>
+            <td>{{bug.assignedTo}}</td>
+            <td>{{bug.createdDate | date}}</td>
+            <td>{{bug.resolvedDate | date}}</td>
+            <td id="buttons">
+                <button mat-button>Edit</button>
+                <button mat-button (click)="onDelete(bug.id)">Delete</button>
+            </td>
+        </tr>
+    </table>
+    
+</div>
