@@ -22,7 +22,7 @@ export class ApiService {
         createdDate: Date;
         assignedTo: string;
         resolvedDate: Date;
-      }>(this.apiUrl, bug)
+      }>(this.apiUrl+"bugs.json", bug)
       .subscribe((responseData) => {
         console.log(responseData);
       });

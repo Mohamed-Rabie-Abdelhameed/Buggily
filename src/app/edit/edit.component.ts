@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatSnackBar, MatSnackBarConfig } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ApiService } from '../services/api.service';
 import { Bug } from '../models/Bug';
@@ -31,6 +31,7 @@ export class EditComponent implements OnInit{
   }){
     this.api.updateBug(this.id, bug);
     this.openSnackBar('Bug updated', 'Close');
+    this.onCancel();
   }
 
   onCancel() {
@@ -52,9 +53,11 @@ export class EditComponent implements OnInit{
     }); 
   }
   openSnackBar(message: string, action: string) {
-    this.snackBar.open(message, action, {
-      duration: 2000,
-      panelClass: ['green-snackbar'],
-    });
+    const config = new MatSnackBarConfig();
+    config.duration = 3000; 
+    config.panelClass = ['green-snackbar'];
+    config.verticalPosition = 'bottom';
+    config.horizontalPosition = 'center';
+    this.snackBar.open(message, action, config);
   }
 }
