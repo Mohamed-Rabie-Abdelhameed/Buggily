@@ -1,32 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
 * {
-    font-family: "Poppins", sans-serif;
-  }
-  
-  body {
-    background-color: #000F08;
-    margin: 0;
-    
-  }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #000f08;
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
 .green-snackbar {
-  background-color:#43aa8b;
+  background-color: #43aa8b;
   width: fit-content;
   border-radius: 5px;
   color: #f6f4f3;
   font-size: 20px;
-  margin: 10px;  
+  margin: 10px;
 }
 
 .red-snackbar {
-  background-color:#dd3936;
+  background-color: #dd3936;
   width: fit-content;
   border-radius: 5px;
   color: #f6f4f3;
   font-size: 20px;
-  margin: 10px;  
+  margin: 10px;
 }
 ::-webkit-scrollbar {
   width: 8px;

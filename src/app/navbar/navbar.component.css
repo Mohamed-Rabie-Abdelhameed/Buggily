@@ -28,15 +28,15 @@ div {
   color: #f6f4f3;
   font-size: 22px;
   padding-bottom: 5px;
-  border-bottom: #ff7673 2px solid;
+  border-bottom: #ff3935 2px solid;
   font-weight: 400;
   cursor: pointer;
 }
 
 .nav-links > a:hover {
-  color: #ff7673;
+  color: #ff3935;
   border-bottom: #f6f4f3 2px solid;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 
 @media (max-width: 767px) {

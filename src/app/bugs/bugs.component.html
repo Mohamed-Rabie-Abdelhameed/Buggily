@@ -12,6 +12,7 @@
         <tr>
             <th>Title</th>
             <th>Status</th>
+            <th>Priority</th>
             <th>Description</th>
             <th>Assigned to</th>
             <th>Created</th>
@@ -21,6 +22,11 @@
         <tr *ngFor="let bug of bugs">
             <td>{{bug.title}}</td>
             <td>{{bug.status}}</td>
+            <!-- style the priority column based on the priority of the bug -->
+            <td [ngClass]="{'low': bug.priority === 'Low', 'medium': bug.priority === 'Medium', 'high': bug.priority === 'High', 'critical': bug.priority === 'Critical'}">
+                {{bug.priority}}
+            </td>
+            <!-- <td>{{bug.priority}}</td> -->
             <td>{{bug.description}}</td>
             <td>{{bug.assignedTo}}</td>
             <td>{{bug.createdDate | date}}</td>

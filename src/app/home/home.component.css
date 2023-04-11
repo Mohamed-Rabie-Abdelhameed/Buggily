@@ -62,14 +62,12 @@
   height: 50px;
   border-radius: 5px;
   font-size: 1.2em;
-  font-weight: 600;
-  color: #f6f4f3;
   cursor: pointer;
-  background-color: #00af92;
+  background-color: #168cff;
 }
 
 .buttons > button:hover {
-  background-color: #009a7f;
+  background-color: #41a0ff;
   transition: 0.3s;
 }
 
@@ -78,7 +76,7 @@
 }
 
 .buttons > button:nth-child(1):hover {
-  background-color: #b52b2a;
+  background-color: #fd4643;
   transition: 0.3s;
 }
 #out {

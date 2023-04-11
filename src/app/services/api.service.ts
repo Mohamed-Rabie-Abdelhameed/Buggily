@@ -18,6 +18,7 @@ export class ApiService {
         title: string;
         description: string;
         status: string;
+        priority: string;
         createdBy: string;
         createdDate: Date;
         assignedTo: string;

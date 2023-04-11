@@ -31,6 +31,7 @@ export class EditComponent implements OnInit{
     title: string;
     description: string;
     status: string;
+    priority: string;
     createdDate: Date;
     assignedTo: string;
     resolvedDate: Date;
@@ -53,6 +54,7 @@ export class EditComponent implements OnInit{
       this.editForm.setValue({
         title: this.current.title,
         description: this.current.description,
+        priority: this.current.priority,
         status: this.current.status,
         assignedTo: this.current.assignedTo,
       });

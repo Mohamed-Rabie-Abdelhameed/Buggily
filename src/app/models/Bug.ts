@@ -3,6 +3,7 @@ export class Bug{
     title!: string;
     description!: string;
     status!: string;
+    priority!: string;
     createdDate!: Date;
     assignedTo!: string;
     resolvedDate!: Date;

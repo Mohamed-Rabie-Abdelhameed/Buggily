@@ -31,6 +31,7 @@ export class NewComponent implements OnInit {
     title: string;
     description: string;
     status: string;
+    priority: string;
     createdDate: Date;
     assignedTo: string;
     resolvedDate: Date;
@@ -39,6 +40,7 @@ export class NewComponent implements OnInit {
       title: bug.title,
       description: bug.description,
       status: bug.status,
+      priority: bug.priority,
       createdDate: new Date(),
       assignedTo: bug.assignedTo,
       resolvedDate: new Date(),
